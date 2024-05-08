@@ -1,3 +1,5 @@
 Krzysztof 20
 Janusz 40
 Jacek 20
+Wojtek 30
+Wiktor 21

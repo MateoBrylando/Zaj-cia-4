@@ -12,17 +12,45 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
     try {
-      Scanner input = new Scanner(System.in);
       Service s = new Service();
-      System.out.print("Podaj Imie Studenta: ");
+       Scanner input = new Scanner(System.in);
+      int wybor = 0;
+      while (wybor != 3) {
+      System.out.println("Menu");
+      System.out.println("1. Dodaj studenta");
+      System.out.println("2. Wyświetl wszystkich studentów");
+      System.out.println("3. Zamknięcie programu");
+
+      wybor = input.nextInt();
+    
+          switch(wybor) {
+            case 1:
+              System.out.print("Podaj Imie Studenta: ");
+              String name = input.next();
+              System.out.print("Podaj Wiek Studenta: ");
+              int age = input.nextInt();
+              s.addStudent(new Student(name, age));
+              break;
+
+            case 2:
+              var students = s.getStudents();
+              for(Student current : students) {
+                System.out.println(current.ToString());
+              }
+              break;
+            case 3:
+              break;
+          }
+      }
+     /*System.out.print("Podaj Imie Studenta: ");
       String name = input.nextLine();
       System.out.print("Podaj Wiek Studenta: ");
       int age = input.nextInt();
       s.addStudent(new Student(name, age));
       var students = s.getStudents();
       for(Student current : students) {
-        System.out.println(current.ToString());
-      }
+        System.out.println(current.ToString());}*/
+      
     } catch (IOException e) {
     }
   }
