@@ -27,9 +27,11 @@ class Main {
             case 1:
               System.out.print("Podaj Imie Studenta: ");
               String name = input.next();
+              System.out.print("Podaj Nazwisko Studenta: ");
+              String nazwisko = input.next();
               System.out.print("Podaj Wiek Studenta: ");
               int age = input.nextInt();
-              s.addStudent(new Student(name, age));
+              s.addStudent(new Student(name, nazwisko, age));
               break;
 
             case 2:
