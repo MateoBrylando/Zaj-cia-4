@@ -31,7 +31,10 @@ class Main {
               String nazwisko = input.next();
               System.out.print("Podaj Wiek Studenta: ");
               int age = input.nextInt();
-              s.addStudent(new Student(name, nazwisko, age));
+              System.out.print("Podaj Data Urodzenia Studenta: ");
+              String urodziny = input.next();
+            
+              s.addStudent(new Student(name, nazwisko, age, urodziny));
               break;
 
             case 2:
